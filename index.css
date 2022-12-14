@@ -1,0 +1,195 @@
+
+#nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    
+}
+#nav_left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 60%;
+    margin-left: 10px;
+}
+#nav_left>a{
+    text-decoration: none;
+    color: #312074;
+    font-size: 20px;
+}
+#logo > i{
+    font-size: 33px;
+    margin-right: 5px;
+    
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav_right>button{
+    font-size: 20px;
+    text-align: center;
+    margin-right: 40px;
+}
+
+
+/* ********************************************************1st-box********************************** */
+
+.banner-card {
+    position: relative;
+    /* padding-bottom: 180px; */
+    height: 570px;
+    
+    background-color: #cec7e9;
+}
+.banner-card > img{
+    max-width: 100%;
+}
+.banner-text{
+    position: absolute;
+    top: -2%;
+    padding: 20px;
+    color: #181f38;
+}
+.banner-text > p{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.banner-text-2{
+    position: absolute;
+    top: 39%;
+    padding: 20px;
+    color: rgb(35 40 56);
+}
+.banner-text-2 > p{
+    font-size: 20px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner-btn{
+    position: absolute;
+    top:56% ;
+    padding: 20px;
+ }
+
+.banner-card button{
+    font-size: 35px;
+    border: none;
+    border-radius: 10px;
+}
+
+.comp-banner{
+    width: 73%;
+    display: flex;
+    position: absolute;
+    margin-left: 165px;
+    top: 75%;
+    /* border: 1px solid chartreuse; */
+    justify-content: space-between
+}
+.comp-banner img {
+    width: auto;
+}
+.banner-card > p{
+    position: absolute;
+    left: 33%;
+    top: 86%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #576b7e;
+}
+
+
+/* **************************transforming box css******************************** */
+#transform{
+    
+    margin: auto;
+    background-color: #d9a7c7;
+}
+#transform > h1{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a3752;
+}
+#transform > p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #576b7e;
+}
+.cards{
+    width: 93%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.cards > div{
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+}
+.cards >div:nth-child(4) > img{
+    border-radius: 10px 10px;
+}
+.cards > div> img{
+    width: 100%;
+    height: 220px;
+    
+}
+.cards > div > h2{
+    margin-left: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a3752;
+}
+.cards > div > p{
+    margin: 0px 22px 26px 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #576b7e;
+}
+
+/* ----------------------------------------------transform block ends here-------------------------- */
+
+
+/* *****************************************free gift starts from here******************************** */
+
+#gift{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    background-color: #cec7e9;
+}
+.gifttext > p:nth-child(1){
+    margin: 115px 0px 0px 35px;
+    font-weight: 900;
+    font-size: 12px;
+    font-family: Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    color: #84909b;
+}
+.gifttext > h2{
+    margin-left: 35px;
+    font-family: Geneva, Verdana, sans-serif;
+    color: #1a3752;
+}
+.gifttext > p:nth-child(3){
+    margin: auto 87px auto 35px;
+    line-height: 29px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #576b7e;
+}
+#gift > div{
+    width: 48%;
+    margin-top: 60px;
+}
+.giftimg>img{
+    width: 100%;
+}
