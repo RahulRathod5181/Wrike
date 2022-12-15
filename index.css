@@ -33,10 +33,13 @@
     justify-content: center;
     align-items: center;
 }
-#nav_right>button{
+#nav_right>a>button{
     font-size: 20px;
     text-align: center;
     margin-right: 40px;
+}
+#nav_right > a{
+    text-decoration: none;
 }
 
 
