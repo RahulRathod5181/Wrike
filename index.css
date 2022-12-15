@@ -5,6 +5,9 @@
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    position: sticky;
+    top: 0px;
+    z-index: 100;
     
 }
 #nav_left{
