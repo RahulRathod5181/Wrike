@@ -1,10 +1,11 @@
 
 #nav{
+    width: 98.8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #d9a7c7, #fffcdc);
-    position: sticky;
+    background: linear-gradient(to right, #ede6ea, #fffcdc);
+    position: fixed;
     top: 0px;
     z-index: 100;
     height: 68px;
@@ -33,6 +34,7 @@
 }
 
 
+
 #logo>i {
     font-size: 33px;
     margin-right: 5px;
@@ -46,9 +48,12 @@
     list-style: none;
 }
 #nav_left > ul > li > a {
-    
+    font-weight: 600;
     text-decoration: none;
     color: black;
+}
+#nav_left > ul > li > a:hover{
+    color: #7f5587;
 }
 .main1{
     background-color: aliceblue;
@@ -57,30 +62,51 @@
     top: 120%;
     left: 0%;
     width: 100%;
-    opacity: 1;
+    opacity: 0;
     flex-wrap: wrap;
-    /* visibility: visible;
-    transition-duration: 0.3s; */
+    visibility: hidden;
+    transition-duration: 0.3s;
+}
+
+.backvideo{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+@media (min-aspect-ratio:16/9){
+    .backvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .backvideo{
+        width: auto;
+        height: 100%;
+    }
 }
 .col1{
     flex-basis: 20%;
+    
 }
 .col1>p{
     margin: 30px 0px 25px 30px;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 12px;
     font-family: Geneva, Verdana, sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #84909b;
 }
-/* #nav_left > ul > li:hover .main1{
+#nav_left > ul > li:hover .main1{
     visibility: visible;
     background-color: white;
     width: 100%;
     top: 100%;
     opacity: 1;
     padding: 20px;
-} */
+}
+
 .col1 li {
     list-style: none;
 }
@@ -92,11 +118,26 @@
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
+    font-family: 'Unbounded', cursive;
+    color: #383554;
 }
 #nav_right>a>button {
-    font-size: 20px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin-right: 40px;
+    padding: 11px 27px 11px 27px;
+    border-radius: 10px;
+    border: none;
+    background-color: #08cf65;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#nav_right>a>button:hover{
+    background-color: black;
+    color: white;
 }
 
 #nav_right>a {
@@ -110,7 +151,7 @@
     color: #262525;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;  
 } 
 .col1 p{
@@ -119,6 +160,19 @@
     font-size: 15px;
     margin-left: 31px;
 }
+.main1 > div:nth-child(2){
+    padding-right: 10px;
+    margin-left: 15px;
+}
+.main1 > div:nth-child(3){
+    padding-right: 10px;
+    margin-left: 15px;
+}
+.main1 > div:nth-child(4){
+    width: 100%;
+    margin-left: 15px;
+}
+
 
 /* ********************************************************1st-box********************************** */
 
@@ -126,7 +180,7 @@
     position: relative;
     /* padding-bottom: 180px; */
     height: 570px;
-    
+    margin-top: 69px;
     background-color: #cec7e9;
     background-color: black;
 }
@@ -137,7 +191,7 @@
     position: absolute;
     top: -2%;
     padding: 20px;
-    color: #181f38;
+    color: rgb(234 237 245);
 }
 .banner-text > p{
     font-size: 50px;
@@ -149,7 +203,7 @@
     position: absolute;
     top: 39%;
     padding: 20px;
-    color: rgb(35 40 56);
+    color: rgb(190 196 213);
 }
 .banner-text-2 > p{
     font-size: 20px;
@@ -163,9 +217,20 @@
  }
 
 .banner-card button{
-    font-size: 35px;
+    font-size: 21px;
     border: none;
-    border-radius: 10px;
+    border-radius: 26px;
+    padding: 17px 21px 21px 17px;
+    background-color: #08cf65;
+    color: white;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.banner-card button:hover{
+    background-color: aliceblue;
+    color: black;
+    box-shadow: rgba(255 ,255, 255, 0.16) 0px 10px 36px 0px, rgba(78 ,0 ,231, 0.06) 0px 0px 0px 1px;
+    
 }
 
 .comp-banner{
@@ -179,6 +244,11 @@
 }
 .comp-banner img {
     width: auto;
+    transition: transform .2s;
+}
+.comp-banner img:hover{
+    transform: scale(1.5);
+    
 }
 .banner-card > p{
     position: absolute;
@@ -186,7 +256,7 @@
     top: 86%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #576b7e;
+    color: #c5daed;
 }
 
 
@@ -217,9 +287,14 @@
 }
 .cards > div{
     background-color: white;
+    
     margin-bottom: 40px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-radius: 10px;
+    transition: 0.5s all ease-in-out; 
+}
+.cards > div:hover{
+    transform: scale(1.2);
 }
 .cards >div:nth-child(4) > img{
     border-radius: 10px 10px;
@@ -227,8 +302,9 @@
 .cards > div> img{
     width: 100%;
     height: 220px;
-    
+     
 }
+
 .cards > div > h2{
     margin-left: 19px;
     font-family: Arial, Helvetica, sans-serif;
