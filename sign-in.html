@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-In</title>
+  <link rel="stylesheet" href="sign-in.css">
+</head>
+
+<body>
+  <div id="incontainer">
+    <form id="form">
+      <div id="signin">
+        <h2 id="heading">LOGIN</h2>
+        <div class="form-wrapper">
+          <label for="">Email</label>
+          <input type="email" id="email" class="form-control">
+        </div>
+        <div class="form-wrapper">
+          <label for="">Password</label>
+          <input type="password" id="password" class="form-control">
+        </div>
+        <input type="submit" id="btn" value="submit">
+      </div>
+    </form>
+  </div>
+  </div>
+</body>
+<script>
+  let myform2 = document.getElementById("form");
+  let compare_arr = JSON.parse(localStorage.getItem("details"));
+  let arrdata2 = []
+  myform2.addEventListener("submit", (e) => {
+    e.preventDefault();
+    objectform2 = {
+      email: myform2.email.value,
+      password: myform2.password.value
+    }
+    arrdata2.push(objectform2);
+    compare_arr.forEach((element, index) => {
+      console.log(element.email)
+      console.log(arrdata2[0].email);
+      if ((element.email == arrdata2[0].email) && (element.password == arrdata2[0].password)) {
+        document.getElementById("heading").innerText = "Sign in Successful"
+        alert("Successfully login")
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("heading").innerText = "Wrong Credentials"
+        alert("Please fill correct email and password");
+        window.location.href = "sign-in.html"
+      }
+    });
+  })
+
+</script>
+
+</html>
