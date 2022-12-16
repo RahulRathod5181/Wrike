@@ -39,13 +39,14 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <input type="submit" id="btn" value="Submit" />
+            <!-- <input type="submit" id="btn" value="Submit" /> -->
+            <button type="submit" id="btn">Submit</button>
         </form>
       </div>
 </body>
 
 <script>
-    AOS.init();
+    
     let container = document.getElementById("signup")
     let myform = document.getElementById("form");
     let arrData = JSON.parse(localStorage.getItem("details")) || [];
@@ -64,18 +65,25 @@
                 isPresent = true;
             }
         });
+        
         if(isPresent===true){
             header.innerText = "Account is already Present"
             header.style.color = "#660000"
             
-            
         }else{
             arrData.push(formObj);
-            localStorage.setItem("details",JSON.stringify(arrData));
-            header.innerText = "You Have Successfully Signed-Up";
-            header.style.color = "#333"
-            
+            if(formObj.fname=="" && formObj.lname == "" && formObj.email && formObj.password){
+                alert("Please Fill all the columns")
+            }else{
+
+                localStorage.setItem("details",JSON.stringify(arrData));
+                header.innerText = "You Have Successfully Signed-Up";
+                header.style.color = "#333"
+                alert("Redirecting To Home Page");
+                window.location.href = "index.html";
+            }
         }
     })
+    AOS.init();
 </script>
 </html>

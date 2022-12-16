@@ -46,8 +46,12 @@
       console.log(arrdata2[0].email);
       if ((element.email == arrdata2[0].email) && (element.password == arrdata2[0].password)) {
         document.getElementById("heading").innerText = "Sign in Successful"
+        alert("Successfully login")
+        window.location.href = "index.html";
       } else {
         document.getElementById("heading").innerText = "Wrong Credentials"
+        alert("Please fill correct email and password");
+        window.location.href = "sign-in.html"
       }
     });
   })
