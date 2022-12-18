@@ -4,7 +4,9 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trackio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="user.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 
@@ -291,12 +293,8 @@
 
                 </div>
                 <div id="nav_right">
-                    <a href="/sign-in.html">
-                        <button>Sign In</button>
-                    </a>
-                    <a href="Sign-up.html">
-                        <button>Sign Up</button>
-                    </a>
+                    <i class="fa-sharp fa-solid fa-user-tie"></i>
+                    <h2 id="user">User</h2>
                 </div>
             </nav>
         </div>
@@ -321,9 +319,7 @@
                     <br> software at your fingertips.
                 </p>
             </div>
-            <div class="banner-btn">
-                <button id="get">Get Started</button>
-            </div>
+
             <div class="comp-banner">
                 <div>
                     <img src="https://web-static.wrike.com/tp/storage/uploads/3b19367a-9020-408b-8af7-5e89773b8d4b/1440-logoroll-logo-google.svg"
@@ -359,7 +355,7 @@
         <!---------------------------1st-Box ends here--------------------------------------------------------->
 
 
-        <!-- ****************************Transform The way Block Starts from here****************************** -->
+        <!-- ****************************Transform The way Block Starts from here********************************************* -->
 
         <div id="transform">
             <h1>Transform the way your teams work</h1>
@@ -413,7 +409,7 @@
 
         <!-- --------------------------------------------------gift box ends here-------------------------------------->
 
-        <!-- **********************************************slider starts from here****************************** -->
+        <!-- ********************************************************slider starts from here****************************** -->
         <div id="sliderbox">
             <h2>Stories from our customer</h2>
 
@@ -498,6 +494,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- ****************************************************footer********************************* -->
+
 
         <footer>
             <div class="foot">
@@ -616,11 +615,11 @@
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
-            </div>    
-            <hr>   
+            </div>
+            <hr>
         </footer>
         <div class="social">
-            
+
             <div class="store">
                 <img src="https://web-static.wrike.com/tp/static/assets/img/footer/apple_en.svg" alt="">
                 <img src="https://web-static.wrike.com/tp/static/assets/img/footer/google_play_en.svg" alt="">
@@ -636,5 +635,27 @@
     </div>
 </body>
 <script src="/index.js"></script>
+<script>
+    let name = JSON.parse(localStorage.getItem("username")) || [];
+    document.getElementById("user").innerText = "Hello!" + "     " + name;
+
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+</script>
 
 </html>

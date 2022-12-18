@@ -135,6 +135,26 @@
     transition-duration: 0.3s;
     cursor: pointer;
 }
+
+#nav_right{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#nav_right>i{
+    margin-right: 25px;
+    font-size: 20px;
+}
+#nav_right>h2{
+    padding-right: 180px; 
+    font-family: 'Oxygen', sans-serif;  
+}
+#nav_right>i:hover{
+    color: #cb4961;
+}
 #nav_right>a>button:hover{
     background-color: black;
     color: white;
