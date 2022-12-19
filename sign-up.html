@@ -47,7 +47,7 @@
 
 <script>
 
-    let container = document.getElementById("signup")
+    // let container = document.getElementById("signup")
     let myform = document.getElementById("form");
     let arrData = JSON.parse(localStorage.getItem("details")) || [];
     let header = document.getElementById("header")
@@ -83,7 +83,7 @@
                 header.style.color = "#0c0936"
                 // alert("Redirecting To Home Page");
                 setTimeout(() => {
-                    window.location.href = "index.html"
+                    window.location.href = "sign-in.html"
                 }, 1500)
 
             }

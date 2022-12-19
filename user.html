@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trackio</title>
     <link rel="stylesheet" href="user.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
 </head>
 
 <body>
@@ -34,12 +34,12 @@
         <!-- *****************************Nav Bar Starts from here***************************************** -->
         <div id="container1">
             <nav id="nav">
-                <div id="nav_left">
+                <div id="nav_left" class="navrespo nav-v-class">
                     <div id="logo">
                         <i class="fa-sharp fa-solid fa-feather"></i>
                         <a href="index.html">Trackio</a>
                     </div>
-                    <ul>
+                    <ul class="respo v-class">
                         <!-- ***********why Trackio drop down************ -->
                         <li>
                             <a href="#">Why Trackio?</a>
@@ -293,8 +293,9 @@
 
                 </div>
                 <div id="nav_right">
-                    <i class="fa-sharp fa-solid fa-user-tie"></i>
+                    <i class="fa-sharp fa-solid fa-user-tie user"></i>
                     <h2 id="user">User</h2>
+                    <i class="fa-solid fa-bars" id="ham"></i>
                 </div>
             </nav>
         </div>
@@ -497,7 +498,6 @@
 
         <!-- ****************************************************footer********************************* -->
 
-
         <footer>
             <div class="foot">
                 <ul>
@@ -618,6 +618,11 @@
             </div>
             <hr>
         </footer>
+
+        <!-- -------------------------------footer ends here------------------------------ -->
+
+        <!-- *****************************************bootom starts from here********************************** -->
+
         <div class="social">
 
             <div class="store">
@@ -632,9 +637,12 @@
                 <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
+
+        <!-- ------------------------------------bottom ends here----------------------- -->
     </div>
 </body>
 <script src="/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
     let name = JSON.parse(localStorage.getItem("username")) || [];
     document.getElementById("user").innerText = "Hello!" + "     " + name;
@@ -655,6 +663,13 @@
             prevEl: ".swiper-button-prev",
         },
     });
+
+    let ham = document.getElementById("ham");
+    let respo = document.querySelector(".respo");
+    let navrespo = document.querySelector(".navrespo");
+    ham.addEventListener("click",()=>{
+        respo.classList.toggle("v-class")
+    })
 
 </script>
 

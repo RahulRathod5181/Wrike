@@ -5,7 +5,7 @@ btn.addEventListener("click",()=>{
 })
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
+  spaceBetween: 25,
   centeredSlides: true,
   autoplay: {
     delay: 2500,
@@ -20,6 +20,8 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
 
 
   
