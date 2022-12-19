@@ -4,6 +4,8 @@
 <head>
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +14,9 @@
 </head>
 
 <body>
-  <div id="incontainer">
-    <form id="form">
+  <div id="incontainer" >
+    <form id="form" data-aos="zoom-in"
+    data-aos-duration="1500">
       <div id="signin">
         <h2 id="heading">LOGIN</h2>
         <div class="form-wrapper">
@@ -31,6 +34,7 @@
   </div>
 </body>
 <script>
+  AOS.init();
   let myform2 = document.getElementById("form");
   let compare_arr = JSON.parse(localStorage.getItem("details"));
   let arrdata2 = []
@@ -42,15 +46,15 @@
     }
     arrdata2.push(objectform2);
     compare_arr.forEach((element, index) => {
-      console.log(element.email)
-      console.log(arrdata2[0].email);
       if ((element.email == arrdata2[0].email) && (element.password == arrdata2[0].password)) {
+        
+        localStorage.setItem("username",JSON.stringify(element.fname));
+        document.getElementById("heading").style.color = "black"
         document.getElementById("heading").innerText = "Sign in Successful"
-        alert("Successfully login")
-        window.location.href = "index.html";
+        window.location.href = "user.html";
       } else {
+        document.getElementById("heading").style.color = "black"
         document.getElementById("heading").innerText = "Wrong Credentials"
-        alert("Please fill correct email and password");
         window.location.href = "sign-in.html"
       }
     });

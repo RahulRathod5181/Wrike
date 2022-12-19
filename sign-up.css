@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("Images/blue\ green.jpg");
+    background-image: url("Images/—Pngtree—scene\ with\ geometrical\ forms\ the_1247634.jpg");
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
@@ -22,7 +22,13 @@ body {
     margin: auto;
     padding-top: 68px;
     padding-bottom: 48px;
-    background-image: url("/Images/green.jpg");
+    background:
+    linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+    linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #EC173A;
     background-repeat: no-repeat;
     border-radius: 25px;
     background-size: cover;
@@ -35,8 +41,12 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin-bottom: 32px;
-    color: #333;
+    color: #0c0936;
     letter-spacing: 2px;
+}
+form input{
+    font-size: 20px;
+    color: #1e1010;
 }
 
 form {
@@ -68,7 +78,7 @@ form {
     margin-left: 15px;
     font-size: 14px;
     font-weight: 600;
-    color: #182932;
+    color: #121d24;
 }
 
 .form-control {
@@ -100,3 +110,6 @@ form {
     text-transform: uppercase;
     border-radius: 20px;
 }
+
+
+
